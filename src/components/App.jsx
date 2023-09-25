@@ -6,7 +6,22 @@ const App = () => {
   return (
     <div>
       <CssBaseline />
-      <h1>App</h1>
+      <main>
+        <Switch>
+        <Route exact path="/movie/:id">
+            <h1>Movie Information</h1>
+          </Route>
+          <Route exact path="/actor/:id">
+            <h1>Actors</h1>
+          </Route>
+          <Route exact path="/">
+            <h1>Movies</h1>
+          </Route>
+          <Route exact path="/profile/:id">
+            <h1>Profile</h1>
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 };
